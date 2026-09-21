@@ -1,0 +1,59 @@
+[
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "1", "frame.time_epoch": "1700000000.000000", "frame.len": "66" },
+        "eth": { "eth.src": "aa:bb:cc:00:00:01", "eth.dst": "aa:bb:cc:00:00:02" },
+        "ip": { "ip.src": "192.168.1.10", "ip.dst": "93.184.216.34" },
+        "tcp": {
+          "tcp.srcport": "51820",
+          "tcp.dstport": "443",
+          "tcp.seq": "0",
+          "tcp.ack": "0",
+          "tcp.flags": "0x0002",
+          "tcp.flags_tree": { "tcp.flags.syn": "1", "tcp.flags.ack": "0" }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "2", "frame.time_epoch": "1700000000.012000", "frame.len": "66" },
+        "eth": { "eth.src": "aa:bb:cc:00:00:02", "eth.dst": "aa:bb:cc:00:00:01" },
+        "ip": { "ip.src": "93.184.216.34", "ip.dst": "192.168.1.10" },
+        "tcp": {
+          "tcp.srcport": "443",
+          "tcp.dstport": "51820",
+          "tcp.seq": "0",
+          "tcp.ack": "1",
+          "tcp.flags": "0x0012",
+          "tcp.flags_tree": { "tcp.flags.syn": "1", "tcp.flags.ack": "1" }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "3", "frame.time_epoch": "1700000000.024000", "frame.len": "60" },
+        "eth": { "eth.src": "aa:bb:cc:00:00:01", "eth.dst": "aa:bb:cc:00:00:02" },
+        "ip": { "ip.src": "192.168.1.10", "ip.dst": "93.184.216.34" },
+        "tcp": {
+          "tcp.srcport": "51820",
+          "tcp.dstport": "443",
+          "tcp.seq": "1",
+          "tcp.ack": "1",
+          "tcp.flags": "0x0010",
+          "tcp.flags_tree": { "tcp.flags.syn": "0", "tcp.flags.ack": "1" }
+        }
+      }
+    }
+  }
+]

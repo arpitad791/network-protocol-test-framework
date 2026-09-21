@@ -1,0 +1,34 @@
+[
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "1", "frame.time_epoch": "1700000030.000000", "frame.len": "74" },
+        "ip": { "ip.src": "192.168.1.10", "ip.dst": "8.8.8.8" },
+        "icmp": {
+          "icmp.type": "8",
+          "icmp.code": "0",
+          "icmp.ident": "0x0001",
+          "icmp.seq": "1"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "2", "frame.time_epoch": "1700000030.018000", "frame.len": "74" },
+        "ip": { "ip.src": "8.8.8.8", "ip.dst": "192.168.1.10" },
+        "icmp": {
+          "icmp.type": "0",
+          "icmp.code": "0",
+          "icmp.ident": "0x0001",
+          "icmp.seq": "1"
+        }
+      }
+    }
+  }
+]

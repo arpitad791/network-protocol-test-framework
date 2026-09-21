@@ -1,0 +1,39 @@
+[
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "4", "frame.time_epoch": "1700000020.000000", "frame.len": "412" },
+        "ip": { "ip.src": "192.168.1.10", "ip.dst": "93.184.216.34" },
+        "tcp": { "tcp.srcport": "51822", "tcp.dstport": "80" },
+        "http": {
+          "http.request": "1",
+          "http.request.method": "GET",
+          "http.request.uri": "/",
+          "http.request.version": "HTTP/1.1",
+          "http.host": "example.com",
+          "http.user_agent": "Mozilla/5.0"
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "5", "frame.time_epoch": "1700000020.045000", "frame.len": "1518" },
+        "ip": { "ip.src": "93.184.216.34", "ip.dst": "192.168.1.10" },
+        "tcp": { "tcp.srcport": "80", "tcp.dstport": "51822" },
+        "http": {
+          "http.response": "1",
+          "http.response.code": "200",
+          "http.response.phrase": "OK",
+          "http.content_length": "1256",
+          "http.content_type": "text/html; charset=UTF-8"
+        }
+      }
+    }
+  }
+]

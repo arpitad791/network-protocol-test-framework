@@ -1,0 +1,58 @@
+[
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "1", "frame.time_epoch": "1700000010.000000", "frame.len": "74" },
+        "ip": { "ip.src": "192.168.1.10", "ip.dst": "8.8.8.8" },
+        "udp": { "udp.srcport": "58421", "udp.dstport": "53" },
+        "dns": {
+          "dns.id": "0x1a2b",
+          "dns.flags": "0x0100",
+          "dns.count.queries": "1",
+          "dns.count.answers": "0",
+          "Queries": {
+            "example.com: type A, class IN": {
+              "dns.qry.name": "example.com",
+              "dns.qry.type": "1",
+              "dns.qry.class": "0x0001"
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "_index": "packets-2026-01-05",
+    "_type": "doc",
+    "_source": {
+      "layers": {
+        "frame": { "frame.number": "2", "frame.time_epoch": "1700000010.031000", "frame.len": "90" },
+        "ip": { "ip.src": "8.8.8.8", "ip.dst": "192.168.1.10" },
+        "udp": { "udp.srcport": "53", "udp.dstport": "58421" },
+        "dns": {
+          "dns.id": "0x1a2b",
+          "dns.flags": "0x8180",
+          "dns.count.queries": "1",
+          "dns.count.answers": "1",
+          "Queries": {
+            "example.com: type A, class IN": {
+              "dns.qry.name": "example.com",
+              "dns.qry.type": "1",
+              "dns.qry.class": "0x0001"
+            }
+          },
+          "Answers": {
+            "example.com: type A, class IN, addr 93.184.216.34": {
+              "dns.resp.name": "example.com",
+              "dns.resp.type": "1",
+              "dns.a": "93.184.216.34",
+              "dns.resp.ttl": "3600"
+            }
+          }
+        }
+      }
+    }
+  }
+]

@@ -4,3 +4,4 @@ target/
 .vscode/
 *.class
 *.log
+INTERVIEW_NOTES.md

@@ -1,56 +1,293 @@
 [
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-03",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "1", "frame.time_epoch": "1700000010.000000", "frame.len": "74" },
-        "ip": { "ip.src": "192.168.1.10", "ip.dst": "8.8.8.8" },
-        "udp": { "udp.srcport": "58421", "udp.dstport": "53" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  3, 2026 11:53:50.580112000 India Standard Time",
+          "frame.time_utc": "Oct  3, 2026 06:23:50.580112000 UTC",
+          "frame.time_epoch": "1791008630.580112000",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.001036400",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "19.323306200",
+          "frame.number": "145",
+          "frame.len": "71",
+          "frame.cap_len": "71",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:dns",
+          "frame.coloring_rule.name": "UDP",
+          "frame.coloring_rule.string": "udp"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:02",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Router",
+            "eth.dst.oui": "0",
+            "eth.dst.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:01",
+          "eth.src_tree": {
+            "eth.src_resolved": "Laptop",
+            "eth.src.oui": "0",
+            "eth.src.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "57",
+          "ip.id": "0xb6ed",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "128",
+          "ip.proto": "17",
+          "ip.checksum": "0x95cd",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.src_host": "192.168.1.10",
+          "ip.host": "192.168.1.10",
+          "ip.dst": "8.8.8.8",
+          "ip.addr": "8.8.8.8",
+          "ip.dst_host": "8.8.8.8",
+          "ip.host": "8.8.8.8"
+        },
+        "udp": {
+          "udp.srcport": "52667",
+          "udp.dstport": "53",
+          "udp.port": "52667",
+          "udp.port": "53",
+          "udp.length": "37",
+          "udp.checksum": "0x744a",
+          "udp.checksum.status": "2",
+          "udp.stream": "4",
+          "Timestamps": {
+            "udp.time_relative": "0.000000000",
+            "udp.time_delta": "0.000000000"
+          },
+          "udp.payload": "00:02:01:00:00:01:00:00:00:00:00:00:07:65:78:61:6d:70:6c:65:03:63:6f:6d:00:00:01:00:01"
+        },
         "dns": {
-          "dns.id": "0x1a2b",
+          "dns.id": "0x0002",
           "dns.flags": "0x0100",
+          "dns.flags_tree": {
+            "dns.flags.response": "0",
+            "dns.flags.opcode": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "1",
+            "dns.flags.z": "0",
+            "dns.flags.checkdisable": "0"
+          },
           "dns.count.queries": "1",
           "dns.count.answers": "0",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "0",
           "Queries": {
             "example.com: type A, class IN": {
               "dns.qry.name": "example.com",
+              "dns.qry.name.len": "11",
+              "dns.count.labels": "2",
               "dns.qry.type": "1",
               "dns.qry.class": "0x0001"
             }
-          }
+          },
+          "dns.response_in": "146"
         }
       }
     }
   },
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-03",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "2", "frame.time_epoch": "1700000010.031000", "frame.len": "90" },
-        "ip": { "ip.src": "8.8.8.8", "ip.dst": "192.168.1.10" },
-        "udp": { "udp.srcport": "53", "udp.dstport": "58421" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  3, 2026 11:53:50.648606600 India Standard Time",
+          "frame.time_utc": "Oct  3, 2026 06:23:50.648606600 UTC",
+          "frame.time_epoch": "1791008630.648606600",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.068494600",
+          "frame.time_delta_displayed": "0.068494600",
+          "frame.time_relative": "19.391800800",
+          "frame.number": "146",
+          "frame.len": "103",
+          "frame.cap_len": "103",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:udp:dns",
+          "frame.coloring_rule.name": "UDP",
+          "frame.coloring_rule.string": "udp"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:01",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Laptop",
+            "eth.dst.oui": "0",
+            "eth.dst.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:02",
+          "eth.src_tree": {
+            "eth.src_resolved": "Router",
+            "eth.src.oui": "0",
+            "eth.src.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x80",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "32",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "89",
+          "ip.id": "0xd3d1",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "104",
+          "ip.proto": "17",
+          "ip.checksum": "0x9049",
+          "ip.checksum.status": "2",
+          "ip.src": "8.8.8.8",
+          "ip.addr": "8.8.8.8",
+          "ip.src_host": "8.8.8.8",
+          "ip.host": "8.8.8.8",
+          "ip.dst": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.dst_host": "192.168.1.10",
+          "ip.host": "192.168.1.10"
+        },
+        "udp": {
+          "udp.srcport": "53",
+          "udp.dstport": "52667",
+          "udp.port": "53",
+          "udp.port": "52667",
+          "udp.length": "69",
+          "udp.checksum": "0x9145",
+          "udp.checksum.status": "2",
+          "udp.stream": "4",
+          "Timestamps": {
+            "udp.time_relative": "0.068494600",
+            "udp.time_delta": "0.068494600"
+          },
+          "udp.payload": "00:02:81:80:00:01:00:02:00:00:00:00:07:65:78:61:6d:70:6c:65:03:63:6f:6d:00:00:01:00:01:c0:0c:00:01:00:01:00:00:01:2c:00:04:ac:42:93:f3:c0:0c:00:01:00:01:00:00:01:2c:00:04:68:14:17:9a"
+        },
         "dns": {
-          "dns.id": "0x1a2b",
+          "dns.id": "0x0002",
           "dns.flags": "0x8180",
+          "dns.flags_tree": {
+            "dns.flags.response": "1",
+            "dns.flags.opcode": "0",
+            "dns.flags.authoritative": "0",
+            "dns.flags.truncated": "0",
+            "dns.flags.recdesired": "1",
+            "dns.flags.recavail": "1",
+            "dns.flags.z": "0",
+            "dns.flags.authenticated": "0",
+            "dns.flags.checkdisable": "0",
+            "dns.flags.rcode": "0"
+          },
           "dns.count.queries": "1",
-          "dns.count.answers": "1",
+          "dns.count.answers": "2",
+          "dns.count.auth_rr": "0",
+          "dns.count.add_rr": "0",
           "Queries": {
             "example.com: type A, class IN": {
               "dns.qry.name": "example.com",
+              "dns.qry.name.len": "11",
+              "dns.count.labels": "2",
               "dns.qry.type": "1",
               "dns.qry.class": "0x0001"
             }
           },
           "Answers": {
-            "example.com: type A, class IN, addr 93.184.216.34": {
+            "example.com: type A, class IN, addr 172.66.147.243": {
               "dns.resp.name": "example.com",
               "dns.resp.type": "1",
-              "dns.a": "93.184.216.34",
-              "dns.resp.ttl": "3600"
+              "dns.resp.class": "0x0001",
+              "dns.resp.ttl": "300",
+              "dns.resp.len": "4",
+              "dns.a": "172.66.147.243"
+            },
+            "example.com: type A, class IN, addr 104.20.23.154": {
+              "dns.resp.name": "example.com",
+              "dns.resp.type": "1",
+              "dns.resp.class": "0x0001",
+              "dns.resp.ttl": "300",
+              "dns.resp.len": "4",
+              "dns.a": "104.20.23.154"
             }
-          }
+          },
+          "dns.response_to": "145",
+          "dns.time": "0.068494600"
         }
       }
     }

@@ -36,12 +36,21 @@ it exercises the same muscle the role needs day to day:
    - **IcmpPingTest** — echo request/reply share an identifier and round-trip
      latency is under a threshold
 
-## Sample captures included
+## Captures included
 
-`src/test/resources/captures/*.json` contains four small, hand-built capture
-exports (one per protocol) so `mvn test` passes immediately without needing
-Wireshark installed. They mirror the exact shape tshark's `-T json` output
-produces.
+`src/test/resources/captures/*.json` contains one small capture export per
+protocol, so `mvn test` runs immediately without Wireshark installed:
+
+| File | Source |
+|------|--------|
+| `icmp_ping.json` | **Real capture** — `ping -n 1 8.8.8.8` recorded with Wireshark, exported with tshark |
+| `dns_query.json` | **Real capture** — `nslookup example.com 8.8.8.8` recorded with Wireshark, exported with tshark |
+| `tcp_handshake.json` | Hand-built sample in tshark's `-T json` format |
+| `http_get.json` | Hand-built sample in tshark's `-T json` format |
+
+In the real captures, MAC addresses, the local IP address and the capture
+interface ID were replaced with placeholder values before committing. Packet
+timing, protocol fields and public addresses are unmodified.
 
 ## Running the tests
 
@@ -54,11 +63,10 @@ TestNG's HTML/XML report is written to `target/surefire-reports/`. CI
 uploads that report as a build artifact — this is the "participate in CI"
 and "execution reports" part of the workflow.
 
-## Using your own real captures (recommended before an interview)
+## Capturing your own traffic
 
-The included fixtures are synthetic so the repo runs out of the box, but you
-should replace at least one with a real capture so you can speak to it
-first-hand:
+To reproduce or extend the captures above (or replace the two hand-built TCP
+and HTTP samples with real ones), follow these steps:
 
 1. Install [Wireshark](https://www.wireshark.org/) (includes `tshark`).
 2. Start a capture on your active interface, then generate the traffic you
@@ -96,17 +104,3 @@ network-protocol-test-framework/
 │           └── captures/*.json
 └── .github/workflows/ci.yml
 ```
-
-## Talking points for an interview
-
-- **What it tests and why**: three protocols most networking coursework
-  covers (TCP, DNS, ICMP) plus HTTP, validated against the actual field
-  values Wireshark decodes, not just "did the ping succeed."
-- **Why JSON export instead of a pcap parsing library**: keeps the framework
-  dependency-light (just Jackson) and mirrors how a CI pipeline would consume
-  `tshark` output without needing native packet-capture permissions on a
-  build agent.
-- **How this would extend to a real E2E/telecom environment**: same pattern —
-  capture on a DUT (device under test) or lab interface, export, assert on
-  protocol/field correctness — just pointed at real hardware captures instead
-  of sample fixtures.

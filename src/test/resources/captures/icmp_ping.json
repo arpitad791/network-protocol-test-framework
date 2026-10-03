@@ -1,32 +1,219 @@
 [
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-03",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "1", "frame.time_epoch": "1700000030.000000", "frame.len": "74" },
-        "ip": { "ip.src": "192.168.1.10", "ip.dst": "8.8.8.8" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  3, 2026 11:53:43.071275400 India Standard Time",
+          "frame.time_utc": "Oct  3, 2026 06:23:43.071275400 UTC",
+          "frame.time_epoch": "1791008623.071275400",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.106784200",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "11.814469600",
+          "frame.number": "98",
+          "frame.len": "74",
+          "frame.cap_len": "74",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data",
+          "frame.coloring_rule.name": "ICMP",
+          "frame.coloring_rule.string": "icmp || icmpv6"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:02",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Router",
+            "eth.dst.oui": "0",
+            "eth.dst.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:01",
+          "eth.src_tree": {
+            "eth.src_resolved": "Laptop",
+            "eth.src.oui": "0",
+            "eth.src.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "60",
+          "ip.id": "0xb6eb",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "128",
+          "ip.proto": "1",
+          "ip.checksum": "0x95dc",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.src_host": "192.168.1.10",
+          "ip.host": "192.168.1.10",
+          "ip.dst": "8.8.8.8",
+          "ip.addr": "8.8.8.8",
+          "ip.dst_host": "8.8.8.8",
+          "ip.host": "8.8.8.8"
+        },
         "icmp": {
           "icmp.type": "8",
           "icmp.code": "0",
-          "icmp.ident": "0x0001",
-          "icmp.seq": "1"
+          "icmp.checksum": "0x4d59",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1",
+          "icmp.ident_le": "256",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_in": "99",
+          "data": {
+            "data.data": "61:62:63:64:65:66:67:68:69:6a:6b:6c:6d:6e:6f:70:71:72:73:74:75:76:77:61:62:63:64:65:66:67:68:69",
+            "data.len": "32"
+          }
         }
       }
     }
   },
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-03",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "2", "frame.time_epoch": "1700000030.018000", "frame.len": "74" },
-        "ip": { "ip.src": "8.8.8.8", "ip.dst": "192.168.1.10" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  3, 2026 11:53:43.145782100 India Standard Time",
+          "frame.time_utc": "Oct  3, 2026 06:23:43.145782100 UTC",
+          "frame.time_epoch": "1791008623.145782100",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.074506700",
+          "frame.time_delta_displayed": "0.074506700",
+          "frame.time_relative": "11.888976300",
+          "frame.number": "99",
+          "frame.len": "74",
+          "frame.cap_len": "74",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:icmp:data",
+          "frame.coloring_rule.name": "ICMP",
+          "frame.coloring_rule.string": "icmp || icmpv6"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:01",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Laptop",
+            "eth.dst.oui": "0",
+            "eth.dst.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:02",
+          "eth.src_tree": {
+            "eth.src_resolved": "Router",
+            "eth.src.oui": "0",
+            "eth.src.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "60",
+          "ip.id": "0x0000",
+          "ip.flags": "0x00",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "0",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "111",
+          "ip.proto": "1",
+          "ip.checksum": "0x5dc8",
+          "ip.checksum.status": "2",
+          "ip.src": "8.8.8.8",
+          "ip.addr": "8.8.8.8",
+          "ip.src_host": "8.8.8.8",
+          "ip.host": "8.8.8.8",
+          "ip.dst": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.dst_host": "192.168.1.10",
+          "ip.host": "192.168.1.10"
+        },
         "icmp": {
           "icmp.type": "0",
           "icmp.code": "0",
-          "icmp.ident": "0x0001",
-          "icmp.seq": "1"
+          "icmp.checksum": "0x5559",
+          "icmp.checksum.status": "1",
+          "icmp.ident": "1",
+          "icmp.ident_le": "256",
+          "icmp.seq": "2",
+          "icmp.seq_le": "512",
+          "icmp.resp_to": "98",
+          "icmp.resptime": "74.5067",
+          "data": {
+            "data.data": "61:62:63:64:65:66:67:68:69:6a:6b:6c:6d:6e:6f:70:71:72:73:74:75:76:77:61:62:63:64:65:66:67:68:69",
+            "data.len": "32"
+          }
         }
       }
     }

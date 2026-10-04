@@ -6,15 +6,25 @@ captures taken with **Wireshark / tshark**.
 
 ## Why this project exists
 
-Built while preparing for a Testing Intern role focused on network/telecom
-verification. It's deliberately scoped to fundamentals rather than anything
-telecom-specific (DWDM/optical gear isn't something a fresher can access), but
-it exercises the same muscle the role needs day to day:
+Network problems often show up as protocol-level symptoms: a handshake that
+never completes, a DNS response with no answer, a reply that arrives too late.
+Wireshark shows these in a GUI, but checking them by eye doesn't scale or
+repeat.
 
-- Reading a packet capture and reasoning about protocol correctness
-- Writing **TestNG** based functional/regression test cases
-- Structuring a test project with Maven, fixtures, and CI
-- Producing test execution reports a reviewer can read
+This project turns those checks into automated tests. It takes packet
+captures exported from Wireshark/tshark and uses TestNG to assert that each
+protocol behaved correctly: field values, packet ordering, and timing. The
+tests can run in CI on every commit, so the same checks run the same way
+each time.
+
+It covers fundamentals (TCP, DNS, HTTP, ICMP) and applies the same approach
+to protocol verification and regression testing used in larger networking
+and telecom test environments:
+
+- Reading packet captures and reasoning about protocol correctness
+- Writing TestNG functional and regression test cases
+- Structuring a Maven test project with fixtures and CI
+- Producing execution reports that a reviewer can read
 
 ## How it works
 

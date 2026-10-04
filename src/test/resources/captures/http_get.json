@@ -1,37 +1,378 @@
 [
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-04",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "4", "frame.time_epoch": "1700000020.000000", "frame.len": "412" },
-        "ip": { "ip.src": "192.168.1.10", "ip.dst": "93.184.216.34" },
-        "tcp": { "tcp.srcport": "51822", "tcp.dstport": "80" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  4, 2026 23:33:36.659731500 India Standard Time",
+          "frame.time_utc": "Oct  4, 2026 18:03:36.659731500 UTC",
+          "frame.time_epoch": "1791137016.659731500",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000336500",
+          "frame.time_delta_displayed": "0.000000000",
+          "frame.time_relative": "11.997113900",
+          "frame.number": "6",
+          "frame.len": "129",
+          "frame.cap_len": "129",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:http",
+          "frame.coloring_rule.name": "HTTP",
+          "frame.coloring_rule.string": "http || tcp.port == 80 || http2"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:02",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Router",
+            "eth.dst.oui": "0",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:01",
+          "eth.src_tree": {
+            "eth.src_resolved": "Laptop",
+            "eth.src.oui": "0",
+            "eth.src.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x00",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "0",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "115",
+          "ip.id": "0xc1d2",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "128",
+          "ip.proto": "6",
+          "ip.checksum": "0x378d",
+          "ip.checksum.status": "2",
+          "ip.src": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.src_host": "192.168.1.10",
+          "ip.host": "192.168.1.10",
+          "ip.dst": "172.66.147.243",
+          "ip.addr": "172.66.147.243",
+          "ip.dst_host": "172.66.147.243",
+          "ip.host": "172.66.147.243"
+        },
+        "tcp": {
+          "tcp.srcport": "57519",
+          "tcp.dstport": "80",
+          "tcp.port": "57519",
+          "tcp.port": "80",
+          "tcp.stream": "1",
+          "tcp.completeness": "31",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "1",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": ".FDASS"
+          },
+          "tcp.len": "75",
+          "tcp.seq": "1",
+          "tcp.seq_raw": "4258726666",
+          "tcp.nxtseq": "76",
+          "tcp.ack": "1",
+          "tcp.ack_raw": "202661105",
+          "tcp.hdr_len": "20",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": ".......AP..."
+          },
+          "tcp.window_size_value": "255",
+          "tcp.window_size": "65280",
+          "tcp.window_size_scalefactor": "256",
+          "tcp.checksum": "0xc3a0",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "Timestamps": {
+            "tcp.time_relative": "0.113508400",
+            "tcp.time_delta": "0.000336500"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.113171900",
+            "tcp.analysis.bytes_in_flight": "75",
+            "tcp.analysis.push_bytes_sent": "75"
+          },
+          "tcp.payload": "47:45:54:20:2f:20:48:54:54:50:2f:31:2e:31:0d:0a:48:6f:73:74:3a:20:65:78:61:6d:70:6c:65:2e:63:6f:6d:0d:0a:55:73:65:72:2d:41:67:65:6e:74:3a:20:63:75:72:6c:2f:38:2e:32:31:2e:30:0d:0a:41:63:63:65:70:74:3a:20:2a:2f:2a:0d:0a:0d:0a"
+        },
         "http": {
-          "http.request": "1",
-          "http.request.method": "GET",
-          "http.request.uri": "/",
-          "http.request.version": "HTTP/1.1",
+          "GET / HTTP/1.1\\r\\n": {
+            "_ws.expert": {
+              "http.chat": "",
+              "_ws.expert.message": "GET / HTTP/1.1\\r\\n",
+              "_ws.expert.severity": "2097152",
+              "_ws.expert.group": "33554432"
+            },
+            "http.request.method": "GET",
+            "http.request.uri": "/",
+            "http.request.version": "HTTP/1.1"
+          },
           "http.host": "example.com",
-          "http.user_agent": "Mozilla/5.0"
+          "http.request.line": "Host: example.com\r\n",
+          "http.user_agent": "curl/8.21.0",
+          "http.request.line": "User-Agent: curl/8.21.0\r\n",
+          "http.accept": "*/*",
+          "http.request.line": "Accept: */*\r\n",
+          "\\r\\n": "",
+          "http.request.full_uri": "http://example.com/",
+          "http.request": "1",
+          "http.request_number": "1",
+          "http.response_in": "9"
         }
       }
     }
   },
   {
-    "_index": "packets-2026-01-05",
+    "_index": "packets-2026-10-04",
     "_type": "doc",
+    "_score": null,
     "_source": {
       "layers": {
-        "frame": { "frame.number": "5", "frame.time_epoch": "1700000020.045000", "frame.len": "1518" },
-        "ip": { "ip.src": "93.184.216.34", "ip.dst": "192.168.1.10" },
-        "tcp": { "tcp.srcport": "80", "tcp.dstport": "51822" },
+        "frame": {
+          "frame.section_number": "1",
+          "frame.interface_id": "0",
+          "frame.interface_id_tree": {
+            "frame.interface_name": "\\Device\\NPF_{00000000-0000-0000-0000-000000000000}",
+            "frame.interface_description": "Wi-Fi"
+          },
+          "frame.encap_type": "1",
+          "frame.time": "Oct  4, 2026 23:33:36.672934700 India Standard Time",
+          "frame.time_utc": "Oct  4, 2026 18:03:36.672934700 UTC",
+          "frame.time_epoch": "1791137016.672934700",
+          "frame.offset_shift": "0.000000000",
+          "frame.time_delta": "0.000000600",
+          "frame.time_delta_displayed": "0.013203200",
+          "frame.time_relative": "12.010317100",
+          "frame.number": "9",
+          "frame.len": "60",
+          "frame.cap_len": "60",
+          "frame.marked": "0",
+          "frame.ignored": "0",
+          "frame.protocols": "eth:ethertype:ip:tcp:http:data-text-lines",
+          "frame.coloring_rule.name": "HTTP",
+          "frame.coloring_rule.string": "http || tcp.port == 80 || http2"
+        },
+        "eth": {
+          "eth.dst": "00:00:5e:00:53:01",
+          "eth.dst_tree": {
+            "eth.dst_resolved": "Laptop",
+            "eth.dst.oui": "0",
+            "eth.dst.oui_resolved": "Redacted",
+            "eth.addr": "00:00:5e:00:53:01",
+            "eth.addr_resolved": "Laptop",
+            "eth.addr.oui": "0",
+            "eth.addr.oui_resolved": "Redacted",
+            "eth.dst.lg": "0",
+            "eth.lg": "0",
+            "eth.dst.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.src": "00:00:5e:00:53:02",
+          "eth.src_tree": {
+            "eth.src_resolved": "Router",
+            "eth.src.oui": "0",
+            "eth.addr": "00:00:5e:00:53:02",
+            "eth.addr_resolved": "Router",
+            "eth.addr.oui": "0",
+            "eth.src.lg": "0",
+            "eth.lg": "0",
+            "eth.src.ig": "0",
+            "eth.ig": "0"
+          },
+          "eth.type": "0x0800",
+          "eth.padding": "00"
+        },
+        "ip": {
+          "ip.version": "4",
+          "ip.hdr_len": "20",
+          "ip.dsfield": "0x70",
+          "ip.dsfield_tree": {
+            "ip.dsfield.dscp": "28",
+            "ip.dsfield.ecn": "0"
+          },
+          "ip.len": "45",
+          "ip.id": "0x6c91",
+          "ip.flags": "0x02",
+          "ip.flags_tree": {
+            "ip.flags.rb": "0",
+            "ip.flags.df": "1",
+            "ip.flags.mf": "0"
+          },
+          "ip.frag_offset": "0",
+          "ip.ttl": "59",
+          "ip.proto": "6",
+          "ip.checksum": "0xd1a4",
+          "ip.checksum.status": "2",
+          "ip.src": "172.66.147.243",
+          "ip.addr": "172.66.147.243",
+          "ip.src_host": "172.66.147.243",
+          "ip.host": "172.66.147.243",
+          "ip.dst": "192.168.1.10",
+          "ip.addr": "192.168.1.10",
+          "ip.dst_host": "192.168.1.10",
+          "ip.host": "192.168.1.10"
+        },
+        "tcp": {
+          "tcp.srcport": "80",
+          "tcp.dstport": "57519",
+          "tcp.port": "80",
+          "tcp.port": "57519",
+          "tcp.stream": "1",
+          "tcp.completeness": "31",
+          "tcp.completeness_tree": {
+            "tcp.completeness.rst": "0",
+            "tcp.completeness.fin": "1",
+            "tcp.completeness.data": "1",
+            "tcp.completeness.ack": "1",
+            "tcp.completeness.syn-ack": "1",
+            "tcp.completeness.syn": "1",
+            "tcp.completeness.str": ".FDASS"
+          },
+          "tcp.len": "5",
+          "tcp.seq": "933",
+          "tcp.seq_raw": "202662037",
+          "tcp.nxtseq": "938",
+          "tcp.ack": "76",
+          "tcp.ack_raw": "4258726741",
+          "tcp.hdr_len": "20",
+          "tcp.flags": "0x0018",
+          "tcp.flags_tree": {
+            "tcp.flags.res": "0",
+            "tcp.flags.ae": "0",
+            "tcp.flags.cwr": "0",
+            "tcp.flags.ece": "0",
+            "tcp.flags.urg": "0",
+            "tcp.flags.ack": "1",
+            "tcp.flags.push": "1",
+            "tcp.flags.reset": "0",
+            "tcp.flags.syn": "0",
+            "tcp.flags.fin": "0",
+            "tcp.flags.str": ".......AP..."
+          },
+          "tcp.window_size_value": "16",
+          "tcp.window_size": "131072",
+          "tcp.window_size_scalefactor": "8192",
+          "tcp.checksum": "0x1ba2",
+          "tcp.checksum.status": "2",
+          "tcp.urgent_pointer": "0",
+          "Timestamps": {
+            "tcp.time_relative": "0.126711600",
+            "tcp.time_delta": "0.000000600"
+          },
+          "tcp.analysis": {
+            "tcp.analysis.initial_rtt": "0.113171900",
+            "tcp.analysis.bytes_in_flight": "937",
+            "tcp.analysis.push_bytes_sent": "5"
+          },
+          "tcp.payload": "30:0d:0a:0d:0a",
+          "tcp.segment_data": "30:0d:0a:0d:0a"
+        },
+        "tcp.segments": {
+          "tcp.segment": "8",
+          "tcp.segment": "9",
+          "tcp.segment.count": "2",
+          "tcp.reassembled.length": "937",
+          "tcp.reassembled.data": "48:54:54:50:2f:31:2e:31:20:32:30:30:20:4f:4b:0d:0a:44:61:74:65:3a:20:53:75:6e:2c:20:30:34:20:4f:63:74:20:32:30:32:36:20:31:38:3a:30:33:3a:33:35:20:47:4d:54:0d:0a:43:6f:6e:74:65:6e:74:2d:54:79:70:65:3a:20:74:65:78:74:2f:68:74:6d:6c:3b:20:63:68:61:72:73:65:74:3d:75:74:66:2d:38:0d:0a:54:72:61:6e:73:66:65:72:2d:45:6e:63:6f:64:69:6e:67:3a:20:63:68:75:6e:6b:65:64:0d:0a:43:6f:6e:6e:65:63:74:69:6f:6e:3a:20:6b:65:65:70:2d:61:6c:69:76:65:0d:0a:53:65:72:76:65:72:3a:20:63:6c:6f:75:64:66:6c:61:72:65:0d:0a:4c:61:73:74:2d:4d:6f:64:69:66:69:65:64:3a:20:46:72:69:2c:20:30:32:20:4f:63:74:20:32:30:32:36:20:31:36:3a:31:31:3a:30:32:20:47:4d:54:0d:0a:41:6c:6c:6f:77:3a:20:47:45:54:2c:20:48:45:41:44:0d:0a:41:63:63:65:70:74:2d:52:61:6e:67:65:73:3a:20:62:79:74:65:73:0d:0a:41:67:65:3a:20:31:33:30:38:35:0d:0a:63:66:2d:63:61:63:68:65:2d:73:74:61:74:75:73:3a:20:48:49:54:0d:0a:43:46:2d:52:41:59:3a:20:61:34:35:36:31:61:61:61:32:66:62:64:33:63:30:36:2d:42:4c:52:0d:0a:61:6c:74:2d:73:76:63:3a:20:68:33:3d:22:3a:34:34:33:22:3b:20:6d:61:3d:38:36:34:30:30:0d:0a:0d:0a:32:34:31:0d:0a:3c:21:64:6f:63:74:79:70:65:20:68:74:6d:6c:3e:3c:68:74:6d:6c:20:6c:61:6e:67:3d:65:6e:3e:3c:68:65:61:64:3e:3c:6d:65:74:61:20:63:68:61:72:73:65:74:3d:75:74:66:2d:38:3e:3c:6c:69:6e:6b:20:72:65:6c:3d:69:63:6f:6e:20:68:72:65:66:3d:64:61:74:61:3a:2c:3e:3c:6d:65:74:61:20:6e:61:6d:65:3d:76:69:65:77:70:6f:72:74:20:63:6f:6e:74:65:6e:74:3d:22:77:69:64:74:68:3d:64:65:76:69:63:65:2d:77:69:64:74:68:2c:69:6e:69:74:69:61:6c:2d:73:63:61:6c:65:3d:31:22:3e:3c:74:69:74:6c:65:3e:45:78:61:6d:70:6c:65:20:44:6f:6d:61:69:6e:3c:2f:74:69:74:6c:65:3e:3c:73:74:79:6c:65:3e:68:74:6d:6c:7b:63:6f:6c:6f:72:2d:73:63:68:65:6d:65:3a:6c:69:67:68:74:20:64:61:72:6b:3b:62:61:63:6b:67:72:6f:75:6e:64:3a:6c:69:67:68:74:2d:64:61:72:6b:28:23:65:65:65:2c:23:32:32:32:29:7d:62:6f:64:79:7b:66:6f:6e:74:3a:31:36:70:78:2f:31:2e:36:20:73:79:73:74:65:6d:2d:75:69:2c:73:61:6e:73:2d:73:65:72:69:66:3b:6d:61:78:2d:77:69:64:74:68:3a:32:36:65:6d:3b:6d:61:72:67:69:6e:3a:61:75:74:6f:3b:70:61:64:64:69:6e:67:3a:32:35:76:68:20:32:65:6d:20:32:65:6d:3b:74:65:78:74:2d:61:6c:69:67:6e:3a:63:65:6e:74:65:72:7d:3c:2f:73:74:79:6c:65:3e:3c:2f:68:65:61:64:3e:3c:62:6f:64:79:3e:3c:70:3e:54:68:69:73:20:64:6f:6d:61:69:6e:20:69:73:20:66:6f:72:20:75:73:65:20:69:6e:20:64:6f:63:75:6d:65:6e:74:61:74:69:6f:6e:20:65:78:61:6d:70:6c:65:73:20:77:69:74:68:6f:75:74:20:6e:65:65:64:69:6e:67:20:70:65:72:6d:69:73:73:69:6f:6e:2e:20:54:68:69:73:20:69:73:20:6e:6f:74:20:61:20:73:65:72:76:69:63:65:3b:20:61:76:6f:69:64:20:72:65:6c:79:69:6e:67:20:6f:6e:20:69:74:20:66:6f:72:20:74:65:73:74:69:6e:67:20:61:6e:64:20:6d:6f:6e:69:74:6f:72:69:6e:67:20:70:75:72:70:6f:73:65:73:2e:3c:2f:70:3e:3c:73:63:72:69:70:74:20:73:72:63:3d:2f:73:2e:6a:73:3e:3c:2f:73:63:72:69:70:74:3e:3c:2f:62:6f:64:79:3e:3c:2f:68:74:6d:6c:3e:0a:0d:0a:30:0d:0a:0d:0a"
+        },
         "http": {
+          "HTTP/1.1 200 OK\\r\\n": {
+            "_ws.expert": {
+              "http.chat": "",
+              "_ws.expert.message": "HTTP/1.1 200 OK\\r\\n",
+              "_ws.expert.severity": "2097152",
+              "_ws.expert.group": "33554432"
+            },
+            "http.response.version": "HTTP/1.1",
+            "http.response.code": "200",
+            "http.response.code.desc": "OK",
+            "http.response.phrase": "OK"
+          },
+          "http.date": "Sun, 04 Oct 2026 18:03:35 GMT",
+          "http.response.line": "Date: Sun, 04 Oct 2026 18:03:35 GMT\r\n",
+          "http.content_type": "text/html; charset=utf-8",
+          "http.response.line": "Content-Type: text/html; charset=utf-8\r\n",
+          "http.transfer_encoding": "chunked",
+          "http.response.line": "Transfer-Encoding: chunked\r\n",
+          "http.connection": "keep-alive",
+          "http.response.line": "Connection: keep-alive\r\n",
+          "http.server": "cloudflare",
+          "http.response.line": "Server: cloudflare\r\n",
+          "http.last_modified": "Fri, 02 Oct 2026 16:11:02 GMT",
+          "http.response.line": "Last-Modified: Fri, 02 Oct 2026 16:11:02 GMT\r\n",
+          "http.response.line": "Allow: GET, HEAD\r\n",
+          "http.response.line": "Accept-Ranges: bytes\r\n",
+          "http.response.line": "Age: 13085\r\n",
+          "http.response.line": "cf-cache-status: HIT\r\n",
+          "http.response.line": "CF-RAY: a4561aaa2fbd3c06-BLR\r\n",
+          "http.response.line": "alt-svc: h3=\":443\"; ma=86400\r\n",
+          "\\r\\n": "",
           "http.response": "1",
-          "http.response.code": "200",
-          "http.response.phrase": "OK",
-          "http.content_length": "1256",
-          "http.content_type": "text/html; charset=UTF-8"
+          "http.response_number": "1",
+          "http.time": "0.013203200",
+          "http.request_in": "6",
+          "http.response_for.uri": "http://example.com/",
+          "HTTP chunked response": {
+            "Data chunk (577 octets)": {
+              "http.chunk_size": "577",
+              "http.chunk_data": "3c:21:64:6f:63:74:79:70:65:20:68:74:6d:6c:3e:3c:68:74:6d:6c:20:6c:61:6e:67:3d:65:6e:3e:3c:68:65:61:64:3e:3c:6d:65:74:61:20:63:68:61:72:73:65:74:3d:75:74:66:2d:38:3e:3c:6c:69:6e:6b:20:72:65:6c:3d:69:63:6f:6e:20:68:72:65:66:3d:64:61:74:61:3a:2c:3e:3c:6d:65:74:61:20:6e:61:6d:65:3d:76:69:65:77:70:6f:72:74:20:63:6f:6e:74:65:6e:74:3d:22:77:69:64:74:68:3d:64:65:76:69:63:65:2d:77:69:64:74:68:2c:69:6e:69:74:69:61:6c:2d:73:63:61:6c:65:3d:31:22:3e:3c:74:69:74:6c:65:3e:45:78:61:6d:70:6c:65:20:44:6f:6d:61:69:6e:3c:2f:74:69:74:6c:65:3e:3c:73:74:79:6c:65:3e:68:74:6d:6c:7b:63:6f:6c:6f:72:2d:73:63:68:65:6d:65:3a:6c:69:67:68:74:20:64:61:72:6b:3b:62:61:63:6b:67:72:6f:75:6e:64:3a:6c:69:67:68:74:2d:64:61:72:6b:28:23:65:65:65:2c:23:32:32:32:29:7d:62:6f:64:79:7b:66:6f:6e:74:3a:31:36:70:78:2f:31:2e:36:20:73:79:73:74:65:6d:2d:75:69:2c:73:61:6e:73:2d:73:65:72:69:66:3b:6d:61:78:2d:77:69:64:74:68:3a:32:36:65:6d:3b:6d:61:72:67:69:6e:3a:61:75:74:6f:3b:70:61:64:64:69:6e:67:3a:32:35:76:68:20:32:65:6d:20:32:65:6d:3b:74:65:78:74:2d:61:6c:69:67:6e:3a:63:65:6e:74:65:72:7d:3c:2f:73:74:79:6c:65:3e:3c:2f:68:65:61:64:3e:3c:62:6f:64:79:3e:3c:70:3e:54:68:69:73:20:64:6f:6d:61:69:6e:20:69:73:20:66:6f:72:20:75:73:65:20:69:6e:20:64:6f:63:75:6d:65:6e:74:61:74:69:6f:6e:20:65:78:61:6d:70:6c:65:73:20:77:69:74:68:6f:75:74:20:6e:65:65:64:69:6e:67:20:70:65:72:6d:69:73:73:69:6f:6e:2e:20:54:68:69:73:20:69:73:20:6e:6f:74:20:61:20:73:65:72:76:69:63:65:3b:20:61:76:6f:69:64:20:72:65:6c:79:69:6e:67:20:6f:6e:20:69:74:20:66:6f:72:20:74:65:73:74:69:6e:67:20:61:6e:64:20:6d:6f:6e:69:74:6f:72:69:6e:67:20:70:75:72:70:6f:73:65:73:2e:3c:2f:70:3e:3c:73:63:72:69:70:74:20:73:72:63:3d:2f:73:2e:6a:73:3e:3c:2f:73:63:72:69:70:74:3e:3c:2f:62:6f:64:79:3e:3c:2f:68:74:6d:6c:3e:0a",
+              "http.chunk_boundary": "0d:0a"
+            },
+            "End of chunked encoding": {
+              "http.chunk_size": "0"
+            },
+            "\\r\\n": ""
+          },
+          "http.file_data": "3c:21:64:6f:63:74:79:70:65:20:68:74:6d:6c:3e:3c:68:74:6d:6c:20:6c:61:6e:67:3d:65:6e:3e:3c:68:65:61:64:3e:3c:6d:65:74:61:20:63:68:61:72:73:65:74:3d:75:74:66:2d:38:3e:3c:6c:69:6e:6b:20:72:65:6c:3d:69:63:6f:6e:20:68:72:65:66:3d:64:61:74:61:3a:2c:3e:3c:6d:65:74:61:20:6e:61:6d:65:3d:76:69:65:77:70:6f:72:74:20:63:6f:6e:74:65:6e:74:3d:22:77:69:64:74:68:3d:64:65:76:69:63:65:2d:77:69:64:74:68:2c:69:6e:69:74:69:61:6c:2d:73:63:61:6c:65:3d:31:22:3e:3c:74:69:74:6c:65:3e:45:78:61:6d:70:6c:65:20:44:6f:6d:61:69:6e:3c:2f:74:69:74:6c:65:3e:3c:73:74:79:6c:65:3e:68:74:6d:6c:7b:63:6f:6c:6f:72:2d:73:63:68:65:6d:65:3a:6c:69:67:68:74:20:64:61:72:6b:3b:62:61:63:6b:67:72:6f:75:6e:64:3a:6c:69:67:68:74:2d:64:61:72:6b:28:23:65:65:65:2c:23:32:32:32:29:7d:62:6f:64:79:7b:66:6f:6e:74:3a:31:36:70:78:2f:31:2e:36:20:73:79:73:74:65:6d:2d:75:69:2c:73:61:6e:73:2d:73:65:72:69:66:3b:6d:61:78:2d:77:69:64:74:68:3a:32:36:65:6d:3b:6d:61:72:67:69:6e:3a:61:75:74:6f:3b:70:61:64:64:69:6e:67:3a:32:35:76:68:20:32:65:6d:20:32:65:6d:3b:74:65:78:74:2d:61:6c:69:67:6e:3a:63:65:6e:74:65:72:7d:3c:2f:73:74:79:6c:65:3e:3c:2f:68:65:61:64:3e:3c:62:6f:64:79:3e:3c:70:3e:54:68:69:73:20:64:6f:6d:61:69:6e:20:69:73:20:66:6f:72:20:75:73:65:20:69:6e:20:64:6f:63:75:6d:65:6e:74:61:74:69:6f:6e:20:65:78:61:6d:70:6c:65:73:20:77:69:74:68:6f:75:74:20:6e:65:65:64:69:6e:67:20:70:65:72:6d:69:73:73:69:6f:6e:2e:20:54:68:69:73:20:69:73:20:6e:6f:74:20:61:20:73:65:72:76:69:63:65:3b:20:61:76:6f:69:64:20:72:65:6c:79:69:6e:67:20:6f:6e:20:69:74:20:66:6f:72:20:74:65:73:74:69:6e:67:20:61:6e:64:20:6d:6f:6e:69:74:6f:72:69:6e:67:20:70:75:72:70:6f:73:65:73:2e:3c:2f:70:3e:3c:73:63:72:69:70:74:20:73:72:63:3d:2f:73:2e:6a:73:3e:3c:2f:73:63:72:69:70:74:3e:3c:2f:62:6f:64:79:3e:3c:2f:68:74:6d:6c:3e:0a"
+        },
+        "data-text-lines": {
+          " [truncated]<!doctype html><html lang=en><head><meta charset=utf-8><link rel=icon href=data:,><meta name=viewport content=\"width=device-width,initial-scale=1\"><title>Example Domain<\/title><style>html{color-scheme:light dark;background:ligh": ""
         }
       }
     }

@@ -46,7 +46,7 @@ protocol, so `mvn test` runs immediately without Wireshark installed:
 | `icmp_ping.json` | **Real capture** — `ping -n 1 8.8.8.8` recorded with Wireshark, exported with tshark |
 | `dns_query.json` | **Real capture** — `nslookup example.com 8.8.8.8` recorded with Wireshark, exported with tshark |
 | `tcp_handshake.json` | **Real capture** — first three packets of `curl -4 http://example.com`, recorded with tshark |
-| `http_get.json` | Hand-built sample in tshark's `-T json` format |
+| `http_get.json` | **Real capture** — `curl -4 http://example.com` (GET request and 200 response), recorded with Wireshark |
 
 In the real captures, MAC addresses, the local IP address and the capture
 interface ID were replaced with placeholder values before committing. Packet
@@ -65,8 +65,7 @@ and "execution reports" part of the workflow.
 
 ## Capturing your own traffic
 
-To reproduce or extend the captures above (or replace the hand-built HTTP
-sample with a real one), follow these steps:
+To reproduce or extend the captures above, follow these steps:
 
 1. Install [Wireshark](https://www.wireshark.org/) (includes `tshark`).
 2. Start a capture on your active interface, then generate the traffic you

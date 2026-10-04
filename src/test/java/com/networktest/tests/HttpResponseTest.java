@@ -27,21 +27,25 @@ public class HttpResponseTest {
         Assert.assertEquals(httpPackets.size(), 2, "Expected one HTTP request and one HTTP response");
     }
 
+    // tshark nests some HTTP fields under a key like "GET / HTTP/1.1\r\n", so search all levels.
+    private String httpField(JsonNode packet, String fieldName) {
+        JsonNode value = packet.path("http").findValue(fieldName);
+        return value == null ? null : value.asText();
+    }
+
     @Test
     public void requestUsesGetMethod() {
-        String method = httpPackets.get(0).path("http").path("http.request.method").asText();
-        Assert.assertEquals(method, "GET");
+        Assert.assertEquals(httpField(httpPackets.get(0), "http.request.method"), "GET");
     }
 
     @Test
     public void requestTargetsExpectedHost() {
-        String host = httpPackets.get(0).path("http").path("http.host").asText();
-        Assert.assertEquals(host, "example.com");
+        Assert.assertEquals(httpField(httpPackets.get(0), "http.host"), "example.com");
     }
 
     @Test
     public void responseReturnsHttp200() {
-        String statusCode = httpPackets.get(1).path("http").path("http.response.code").asText();
-        Assert.assertEquals(statusCode, "200", "Server should respond with 200 OK");
+        Assert.assertEquals(httpField(httpPackets.get(1), "http.response.code"), "200",
+                "Server should respond with 200 OK");
     }
 }
